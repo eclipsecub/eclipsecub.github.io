@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact V3</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href=assets/css/images/icons/small%20logo.png>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/webfonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/css/contact1.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/contact2.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="bg-contact3" style="background-image: url('assets/css/images/blurred Gazebo.jpg');">
+		<div class="container-contact3">
+			<div class="wrap-contact3">
+				<form class="contact3-form validate-form">
+					<span class="contact3-form-title">
+						Contact Us
+					</span>
+
+					<div class="wrap-contact3-form-radio">
+						<div class="contact3-form-radio m-r-42">
+							<input class="input-radio3" id="radio1" type="radio" name="choice" value="say-hi" checked="checked">
+							<label class="label-radio3" for="radio1">
+								Ask a question
+							</label>
+						</div>
+
+						<div class="contact3-form-radio">
+							<input class="input-radio3" id="radio2" type="radio" name="choice" value="get-quote">
+							<label class="label-radio3" for="radio2">
+								Get an Estimate
+							</label>
+						</div>
+					</div>
+
+
+					<div class="wrap-input3 input3-select">
+						<div>
+							<select id="jobType" class="selection-2" name="service">
+								<option>Job Type</option>
+								<option>Deck Installation</option>
+								<option>Fence Installation</option>
+								<option>Fence Staining</option>
+								<option>Other</option>
+							</select>
+						</div>
+						<span class="focus-input3"></span>
+					</div>
+
+					<div class="wrap-input3 input3-select">
+						<div>
+							<select class="selection-2" name="budget">
+								<option>Material Choice</option>
+								<option>Pressure Treated</option>
+								<option>Cedar</option>
+								<option>Composite</option>
+							</select>
+						</div>
+						<span class="focus-input3"></span>
+					</div>
+
+					<div class="wrap-input3 input3-select" data-validate="Square Feet is required">
+						<input id="feet" class="input3" type="text" name="name" placeholder="Square Feet">
+						<span class="focus-input3"></span>
+					</div>
+
+					<div class="wrap-input3 validate-input" data-validate="Name is required">
+						<input class="input3" type="text" name="name" placeholder="Your Name">
+						<span class="focus-input3"></span>
+					</div>
+
+					<div class="wrap-input3 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input3" type="text" name="email" placeholder="Your Email">
+						<span class="focus-input3"></span>
+					</div>
+
+					<div class="wrap-input3 input3-select">
+						<input class="input3" type="text" name="address" placeholder="Your Address">
+						<span class="focus-input3"></span>
+					</div>
+
+
+
+
+
+					<div class="wrap-input3 validate-input" data-validate = "Message is required">
+						<textarea id="textArea" class="input3" name="message" placeholder="Your Message"></textarea>
+						<span class="focus-input3"></span>
+					</div>
+
+					<div style="float: left" class="container-contact3-form-btn">
+						<button class="contact3-form-btn">
+							Submit
+						</button>
+					</div>
+
+					<div style="float: left; padding-left: 20px " class="container-contact3-form-btn">
+						<button class="contact3-form-btn">
+							Back
+						</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="assets/vendor/bootstrap/js/popper.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="assets/vendor/select2/select2.min.js"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="assets/js/contact_js.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
+</html>
