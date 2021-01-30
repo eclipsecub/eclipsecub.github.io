@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Contact V3</title>
+	<title>Contact</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -23,17 +23,33 @@
 </head>
 <body>
 
+<script>
+	function stainFence(){
+
+		$("#fenceStainingDiv").click();
+
+	}
+</script>
+
 	<div class="bg-contact3" style="background-image: url('assets/css/images/blurred Gazebo.jpg');">
 		<div class="container-contact3">
 			<div class="wrap-contact3">
-				<form class="contact3-form validate-form">
+
+				<div className="text-center" style="display: none" >
+					<!-- Button HTML (to Trigger Modal) -->
+					<a id="fenceStainingDiv" href="#myModal" className="trigger-btn" data-toggle="modal">Click to Open Confirm Modal</a>
+				</div>
+
+
+				<form class="contact3-form validate-form" action="https://formspree.io/f/mdopbybn" method="post">
+
 					<span class="contact3-form-title">
 						Contact Us
 					</span>
 
 					<div class="wrap-contact3-form-radio">
 						<div class="contact3-form-radio m-r-42">
-							<input class="input-radio3" id="radio1" type="radio" name="choice" value="say-hi" checked="checked">
+							<input class="input-radio3" id="radio1" type="radio" name="choice" value="inquiry" checked="checked">
 							<label class="label-radio3" for="radio1">
 								Ask a question
 							</label>
@@ -48,11 +64,12 @@
 					</div>
 
 
-					<div class="wrap-input3 input3-select">
+					<div id="input-select3" class="wrap-input3 input3-select">
 						<div>
-							<select id="jobType" class="selection-2" name="service">
+							<select id="jobType" class="selection-2" name="service" onchange="if (this.selectedIndex == 4) stainFence();">
 								<option>Job Type</option>
 								<option>Deck Installation</option>
+								<option>Deck Staining</option>
 								<option>Fence Installation</option>
 								<option>Fence Staining</option>
 								<option>Other</option>
@@ -63,7 +80,7 @@
 
 					<div class="wrap-input3 input3-select">
 						<div>
-							<select class="selection-2" name="budget">
+							<select class="selection-2" name="material-type">
 								<option>Material Choice</option>
 								<option>Pressure Treated</option>
 								<option>Cedar</option>
@@ -74,7 +91,7 @@
 					</div>
 
 					<div class="wrap-input3 input3-select" data-validate="Square Feet is required">
-						<input id="feet" class="input3" type="text" name="name" placeholder="Square Feet">
+						<input id="feet" class="input3" type="text" name="square-feet" placeholder="Square Feet">
 						<span class="focus-input3"></span>
 					</div>
 
@@ -103,22 +120,29 @@
 					</div>
 
 					<div style="float: left" class="container-contact3-form-btn">
-						<button class="contact3-form-btn">
+						<button  id = "estButton" class="contact3-form-btn">
 							Submit
 						</button>
 					</div>
 
-					<div style="float: left; padding-left: 20px " class="container-contact3-form-btn">
-						<button class="contact3-form-btn">
-							Back
-						</button>
-					</div>
 
 				</form>
+				<div style="float: left; padding-left: 20px " class="container-contact3-form-btn">
+
+					<button class="contact3-form-btn" onclick="window.location.href='index.html'">
+
+						Back
+					</button>
+				</div>
+
 			</div>
 		</div>
 	</div>
 
+
+	<form name="ignore_me">
+		<input type="hidden" id="page_is_dirty" name="page_is_dirty" value="1" />
+	</form>
 
 	<div id="dropDownSelect1"></div>
 
@@ -147,6 +171,121 @@
 
   gtag('config', 'UA-23581568-13');
 </script>
+
+
+	<!-- Modal HTML -->
+	<div id="myModal" class="modal fade">
+		<div class="modal-dialog modal-confirm">
+			<div class="modal-content">
+				<div class="modal-header">
+
+					<h4 class="modal-title">Is this a shared Fence?</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+					<p>If so, we will need confirmation from the parties that also share this fence.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" style="background-color: lightgray" class="btn btn-block" data-dismiss="modal">Okay</button>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		.modal-confirm {
+			color: #636363;
+			width: 400px;
+			margin: 30px auto;
+		}
+		.modal-confirm .modal-content {
+			padding: 20px;
+			border-radius: 5px;
+			border: none;
+			text-align: center;
+			font-size: 14px;
+		}
+		.modal-confirm .modal-header {
+			border-bottom: none;
+			position: relative;
+		}
+		.modal-confirm h4 {
+			text-align: center;
+			font-size: 26px;
+			margin: 30px 0 -10px;
+		}
+		.modal-confirm .close {
+			position: absolute;
+			top: -5px;
+			right: -2px;
+		}
+		.modal-confirm .modal-body {
+			color: #999;
+		}
+		.modal-confirm .modal-footer {
+			border: none;
+			text-align: center;
+			border-radius: 5px;
+			font-size: 13px;
+			padding: 10px 15px 25px;
+		}
+		.modal-confirm .modal-footer a {
+			color: #999;
+		}
+		.modal-confirm .icon-box {
+			width: 80px;
+			height: 80px;
+			margin: 0 auto;
+			border-radius: 50%;
+			z-index: 9;
+			text-align: center;
+			border: 3px solid #f15e5e;
+		}
+		.modal-confirm .icon-box i {
+			color: #f15e5e;
+			font-size: 46px;
+			display: inline-block;
+			margin-top: 13px;
+		}
+		.modal-confirm .btn {
+			color: #fff;
+			border-radius: 4px;
+			background: #60c7c1;
+			text-decoration: none;
+			transition: all 0.4s;
+			line-height: normal;
+			min-width: 120px;
+			border: none;
+			min-height: 40px;
+			border-radius: 3px;
+			margin: 0 5px;
+			outline: none !important;
+		}
+		.modal-confirm .btn-info {
+			background: #c1c1c1;
+		}
+		.modal-confirm .btn-info:hover, .modal-confirm .btn-info:focus {
+			background: #a8a8a8;
+		}
+		.modal-confirm .btn-danger {
+			background: #f15e5e;
+		}
+		.modal-confirm .btn-danger:hover, .modal-confirm .btn-danger:focus {
+			background: #ee3535;
+		}
+		.trigger-btn {
+			display: inline-block;
+			margin: 100px auto;
+		}
+	</style>
 
 </body>
 </html>

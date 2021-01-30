@@ -1,6 +1,30 @@
-
 (function ($) {
     "use strict";
+
+
+    let bool = localStorage.getItem("value")
+
+
+
+
+
+    $(document).ready(function(){
+        if (bool == "est") {
+            $('.input3-select').slideDown(300);
+            document.getElementById("textArea").placeholder = "Job Details";
+            document.getElementById("radio1").checked = false;
+            document.getElementById("radio2").checked = true;
+        }
+        else if (bool == "con"){
+
+            $('.input3-select').slideUp(300);
+            document.getElementById("textArea").placeholder = "Your Message";
+            document.getElementById("radio1").checked = true;
+            document.getElementById("radio2").checked = false;
+
+            }
+
+    })
 
 
     /*==================================================================
@@ -35,7 +59,6 @@
 
 
 
-
     //What I added
     $(document).ready(function() {
 
@@ -43,11 +66,11 @@
 
             var el = $(this) ;
 
-            if(el.val() === "Fence Installation" ) {
+            if(el.val() === "Fence Installation" || el.val() === "Fence Staining") {
                 document.getElementById("feet").placeholder = "Linear Feet";
             }
-            else if(el.val() === "MANUAL" ) {
-                $("#status option:last-child").remove() ; }
+            else {
+                document.getElementById("feet").placeholder = "Square Feet"; }
         });
 
     });

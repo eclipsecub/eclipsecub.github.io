@@ -4,7 +4,32 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
+
+
+function saveDataEst(){
+
+
+	localStorage.setItem("value", "est");
+
+	this.document.location.href = "contact.html";
+
+}
+
+function saveDataCon(){
+
+
+	localStorage.setItem("value", "con");
+
+	this.document.location.href = "contact.html";
+
+}
+
 (function($) {
+
+
+
+
 
 	var	$window = $(window),
 		$body = $('body');

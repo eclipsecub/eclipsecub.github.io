@@ -56,6 +56,10 @@ section, summary, time, mark, audio, video {
 
 
 
+
+
+
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
@@ -1681,7 +1685,7 @@ input, select, textarea {
 		input[type="reset"].alt,
 		button.alt,
 		.button.alt {
-			background: #252122;
+			background: #c51349;
 		}
 
 			input[type="button"].alt:hover,
@@ -1716,8 +1720,10 @@ input, select, textarea {
 		input[type="reset"].large,
 		button.large,
 		.button.large {
+
 			font-size: 1.5em;
 			padding: 0.75em 1.5em 0.75em 1.5em;
+
 		}
 
 /* Image */

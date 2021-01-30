@@ -123,6 +123,8 @@ iframe {
 
 
 
+
+
 /*//////////////////////////////////////////////////////////////////
 [ Contact 2 ]*/
 .bg-contact3 {
@@ -154,7 +156,7 @@ iframe {
   background: -webkit-linear-gradient(45deg, #6981BF, #7F92C2);
   background: -o-linear-gradient(45deg, #6981BF, #7F92C2);
   background: -moz-linear-gradient(45deg, #6981BF, #7F92C2);
-  background: linear-gradient(45deg, #6981BF, #7F92C2);
+  background: linear-gradient(45deg, #2157D9, #7F92C2);
   border-radius: 10px;
   overflow: hidden;
   padding: 72px 55px 65px 55px;
