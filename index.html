@@ -10,6 +10,11 @@
 		<link rel="icon" type="image/png" href=assets/css/images/icons/small%20logo.png>
 	</head>
 	<body class="homepage is-preload">
+
+
+
+
+
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -18,8 +23,11 @@
 					<!-- Logo -->
 
 					<div class="logo-header">
+						<a href="#staining-Estimate"><img src="assets/css/images/Staining.jpg" class="staining-link"></a>
+
 
 					</div>
+
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
@@ -31,6 +39,7 @@
 									<a href="javascript:saveDataCon();" id = "conButton">Contact us</a></li>
 							</ul>
 						</nav>
+
 
 					<!-- Banner -->
 						<section id="banner">
@@ -119,6 +128,8 @@
 
 								<!-- Sidebar -->
 								<section class="box">
+									<a id="staining-Estimate"></a>
+
 									<a href="#" class="image featured"><img src="assets/css/images/stain_comparison.jpg" alt="" /></a>
 									<header>
 										<h3>We offer on-site and remote estimates</h3>
@@ -210,6 +221,8 @@
 				</section>
 			</section>
 
+
+
 			<div id="page-wrapper">
 
 
@@ -253,7 +266,7 @@
 										<li>
 											<h3>Address</h3>
 											<p>
-												5666 14th<br />
+												5666 14th Line<br />
 												Cookstown, ON, Canada
 											</p>
 										</li>
@@ -293,7 +306,219 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+
+
+
+		</div>
 	</body>
 
-
 </html>
+
+
+<script src="https://unpkg.com/popmotion/dist/popmotion.global.min.js"></script>
+<script>
+
+	if(screen.width > 1400) {
+		const staining_button = popmotion.styler(document.querySelector(".staining-link"))
+
+		popmotion.tween({
+			from: {
+				x: -750,
+				y: -500
+			},
+			to: {
+				y: -150,
+				x: -750
+			},
+			duration: 1000,
+			elapsed: -500
+		}).start(staining_button.set)
+	}else if(screen.width < 1400 && screen.width > 600) {
+		const staining_button = popmotion.styler(document.querySelector(".staining-link"))
+		const logo = popmotion.styler(document.querySelector(".logo-header"))
+
+		popmotion.tween({
+			from:{
+
+				x:0,
+				y:20
+			},
+			to:{
+
+				x:-90,
+				y:20
+			},
+			duration: 1500,
+			elapsed: -900
+		}).start(logo.set)
+
+		popmotion.tween({
+			from: {
+				x: 150,
+				y: -500,
+				scale:0.6
+			},
+			to: {
+				y: -180,
+				x: 150,
+				scale:0.6
+			},
+			duration: 1500,
+			elapsed: -2000
+		}).start(staining_button.set)
+	}else if(screen.width < 600 && screen.width > 500) {
+		const staining_button = popmotion.styler(document.querySelector(".staining-link"))
+		const logo = popmotion.styler(document.querySelector(".logo-header"))
+
+		popmotion.tween({
+			from:{
+
+				x:0,
+				y:20
+			},
+			to:{
+
+				x:-90,
+				y:20
+			},
+			duration: 1500,
+			elapsed: -900
+		}).start(logo.set)
+
+		popmotion.tween({
+			from: {
+				x: 110,
+				y: -500,
+				scale:0.5
+			},
+			to: {
+				y: -170,
+				x: 110,
+				scale:0.5
+			},
+			duration: 1500,
+			elapsed: -2000
+		}).start(staining_button.set)
+	}
+	else if (screen.width < 500 && screen.width > 400){
+
+
+		const staining_button = popmotion.styler(document.querySelector(".staining-link"))
+		const logo = popmotion.styler(document.querySelector(".logo-header"))
+
+
+
+		popmotion.tween({
+			from:{
+				scale:1,
+				x:0,
+				y:20
+			},
+			to:{
+				scale:.8,
+				x:-60,
+				y:20
+			},
+			duration: 1500,
+			elapsed: -900
+		}).start(logo.set)
+
+
+		popmotion.tween({
+			from: {
+				x: 100,
+				y: -600,
+				scale:.5
+			},
+			to: {
+				x: 100,
+				y:-192,
+				scale:.5
+			},
+			duration: 1500,
+			elapsed: -2000
+		}).start(staining_button.set)
+	}
+	else if (screen.width < 400 && screen.width > 350){
+
+
+		const staining_button = popmotion.styler(document.querySelector(".staining-link"))
+		const logo = popmotion.styler(document.querySelector(".logo-header"))
+
+
+
+
+		popmotion.tween({
+			from:{
+				scale:1,
+				x:0,
+				y:20
+			},
+			to:{
+				scale:.7,
+				x:-60,
+				y:20
+			},
+			duration: 1500,
+			elapsed: -900
+		}).start(logo.set)
+
+
+		popmotion.tween({
+			from: {
+				x: 100,
+				y:-screen.height,
+				scale:.48
+			},
+			to: {
+				x: 100,
+				y:- 212,
+				scale:.48
+			},
+			duration: 1500,
+			elapsed: -2000
+		}).start(staining_button.set)
+	}
+	else if (screen.width < 350 && screen.width > 200){
+
+
+		const staining_button = popmotion.styler(document.querySelector(".staining-link"))
+		const logo = popmotion.styler(document.querySelector(".logo-header"))
+
+
+
+
+		popmotion.tween({
+			from:{
+				scale:1,
+				x:0,
+				y:20
+			},
+			to:{
+				scale:.68,
+				x:-55,
+				y:20
+			},
+			duration: 1500,
+			elapsed: -900
+		}).start(logo.set)
+
+
+		popmotion.tween({
+			from: {
+				x: 90,
+				y:-screen.height,
+				scale:.45
+			},
+			to: {
+				x: 90,
+				y:- 220,
+				scale:.45
+			},
+			duration: 1500,
+			elapsed: -2000
+		}).start(staining_button.set)
+	}
+
+
+</script>
