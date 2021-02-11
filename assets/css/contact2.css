@@ -193,6 +193,13 @@ iframe {
   margin-bottom: 27px;
 }
 
+.wrap-input4 {
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid rgba(255,255,255,0.24);
+  margin-bottom: 27px;
+}
+
 .input3 {
   display: block;
   width: 100%;
@@ -204,7 +211,27 @@ iframe {
   padding: 0 5px;
 }
 
+.input4 {
+  display: block;
+  width: 100%;
+  background: transparent;
+  font-family: Poppins-Regular;
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.2;
+  padding: 0 5px;
+}
+
 .focus-input3 {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+.focus-input4 {
   position: absolute;
   display: block;
   width: 100%;
@@ -231,14 +258,42 @@ iframe {
   background: #fff;
 }
 
+.focus-input4::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+
+  background: #fff;
+}
+
 
 /*---------------------------------------------*/
 input.input3 {
   height: 45px;
 }
 
+input.input4 {
+  height: 45px;
+}
+
+
 
 textarea.input3 {
+  min-height: 115px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+textarea.input4 {
   min-height: 115px;
   padding-top: 13px;
   padding-bottom: 13px;
@@ -253,6 +308,16 @@ textarea.input3 {
   width: 100%;
 }
 
+
+.input4:focus + .focus-input3::before {
+  width: 100%;
+}
+
+.has-val.input4 + .focus-input3::before {
+  width: 100%;
+}
+
+/*-------
 /*------------------------------------------------------------------
 [  ]*/
 .container-contact3-form-btn {
@@ -475,6 +540,11 @@ textarea.input3 {
 .input3-select {
   display: none;
 }
+
+input4-select {
+  display: none;
+}
+
 
 
 /*//////////////////////////////////////////////////////////////////

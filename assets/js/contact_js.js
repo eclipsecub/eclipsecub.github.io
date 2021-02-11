@@ -11,6 +11,7 @@
     $(document).ready(function(){
         if (bool == "est") {
             $('.input3-select').slideDown(300);
+
             document.getElementById("textArea").placeholder = "Job Details";
             document.getElementById("radio1").checked = false;
             document.getElementById("radio2").checked = true;
@@ -71,6 +72,7 @@
             }
             else {
                 document.getElementById("feet").placeholder = "Square Feet"; }
+
         });
 
     });

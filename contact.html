@@ -37,13 +37,7 @@
 </head>
 <body>
 
-<script>
-	function stainFence(){
 
-		$("#fenceStainingDiv").click();
-
-	}
-</script>
 
 	<div class="bg-contact3" style="background-image: url('assets/css/images/other_stained_fence.jpg	');">
 		<div class="container-contact3">
@@ -80,7 +74,7 @@
 
 					<div id="input-select3" class="wrap-input3 input3-select">
 						<div>
-							<select id="jobType" class="selection-2" name="service" onchange="if (this.selectedIndex == 4) stainFence();">
+							<select id="jobType" class="selection-2" name="service">
 								<option>Job Type</option>
 								<option>Deck Installation</option>
 								<option>Deck Staining</option>
@@ -95,14 +89,30 @@
 					<div class="wrap-input3 input3-select">
 						<div>
 							<select class="selection-2" name="material-type">
-								<option>Material Choice</option>
+								<option>Material</option>
 								<option>Pressure Treated</option>
 								<option>Cedar</option>
 								<option>Composite</option>
+								<option>Other</option>
 							</select>
 						</div>
 						<span class="focus-input3"></span>
 					</div>
+
+					<div id="railing" class="wrap-input3 input3-select">
+						<div>
+							<select class="selection-2">
+								<option>Railing Type</option>
+								<option>No Railing</option>
+								<option>Pressure Treated With Pickets</option>
+								<option>Cedar With Pickets</option>
+								<option>Pressure Treated With Balusters</option>
+								<option>Plexiglas</option>
+							</select>
+						</div>
+						<span class="focus-input3"></span>
+					</div>
+
 
 					<div class="wrap-input3 input3-select" data-validate="Square Feet is required">
 						<input id="feet" class="input3" type="text" name="square-feet" placeholder="Square Feet">
@@ -302,4 +312,29 @@
 	</style>
 
 </body>
+
+
+<script>
+	document.getElementById("jobType").onchange = changeListener;
+
+	function changeListener(){
+		var value = this.value
+
+		if(value=="Fence Staining"){
+			$("#fenceStainingDiv").click();
+			$('#railing').slideUp(300);
+		}
+
+		else if(value == "Deck Installation"){
+
+			$('#railing').slideDown(300);
+		}
+		else if(value == "Fence Installation"){
+
+			$('#railing').slideUp(300);
+		}
+	}
+
+
+</script>
 </html>
